@@ -34,7 +34,8 @@ Cuando terminen, **cierra y vuelve a abrir** PowerShell y la app de Claude para 
 
 ## 2. Copiar la carpeta del proyecto
 
-Copia la carpeta `magicflex-prueba` a tu computadora (por ejemplo en Documentos).
+Descomprime el archivo `magicflex-kit.zip` en tu computadora (por ejemplo en Documentos).
+Te quedará una carpeta llamada `magicflex-kit`: esa es la carpeta del proyecto.
 **No necesitas** el archivo `.env` de otra persona ni la carpeta `node_modules`: usarás tus propias claves.
 
 ---
