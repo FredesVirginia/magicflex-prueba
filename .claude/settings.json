@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(node --env-file=.env scripts/*)",
+      "PowerShell(node scripts/*)",
+      "Bash(node --env-file=.env scripts/*)",
+      "Bash(node scripts/*)"
+    ],
+    "deny": [
+      "Read(./.env)"
+    ]
+  }
+}

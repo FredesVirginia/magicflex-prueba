@@ -1,0 +1,16 @@
+# Claves de API: nunca se suben
+.env
+.env.*
+!.env.example
+
+# Dependencias de desarrollo (se reinstalan con npm install)
+node_modules/
+
+# Videos, voces e imágenes generados (pesados y propios de cada persona)
+series/
+
+# Paquetes para compartir
+entregas/
+
+# Permisos personales de Claude Code
+.claude/settings.local.json
