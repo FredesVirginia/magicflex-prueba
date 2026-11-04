@@ -48,6 +48,24 @@ export async function prepararSerie(serie: string): Promise<CarpetasSerie> {
   return carpetas;
 }
 
+export interface CarpetasPieza {
+  raiz: string;
+  fondos: string;
+  final: string;
+}
+
+// Crea (si no existen) y devuelve las carpetas de un carrusel, post o historia
+export async function prepararPieza(pieza: string): Promise<CarpetasPieza> {
+  const raiz = join('piezas', slug(pieza));
+  const carpetas: CarpetasPieza = {
+    raiz,
+    fondos: join(raiz, 'fondos'),
+    final: join(raiz, 'final'),
+  };
+  for (const ruta of Object.values(carpetas)) await mkdir(ruta, { recursive: true });
+  return carpetas;
+}
+
 // Evita sobrescribir por accidente algo que ya costó dinero generar
 export function protegerArchivo(ruta: string, reemplazar: boolean | undefined): void {
   if (existsSync(ruta) && !reemplazar) {

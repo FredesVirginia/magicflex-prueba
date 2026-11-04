@@ -1,7 +1,7 @@
 ---
 name: mini-serie
-description: Crea mini series de video con personajes que hablan, de principio a fin. Genera la imagen del personaje (OpenRouter), la voz de cada escena (ElevenLabs), anima al personaje para que hable con esa voz (HeyGen) y une las escenas en un video vertical (FFmpeg). Usar cuando pidan crear un personaje, una escena, una voz, animar, unir escenas o hacer una mini serie o video para redes.
-when_to_use: Frases como haz una mini serie, crea un personaje, haz la escena 2, cambia la voz, anima a Carlos, une las escenas, elige una voz, revisa que todo esté listo.
+description: Crea videos y mini series con personajes que hablan, en español o inglés, de principio a fin. Revisa el guion (gancho, duración, tono, datos), genera la imagen del personaje (OpenRouter), la voz de cada escena (ElevenLabs), anima al personaje (HeyGen) y une las escenas en un video vertical (FFmpeg). Usar cuando pidan un video, Reel o mini serie, revisar un guion, crear un personaje, una escena o una voz, animar o unir escenas. No usar para carruseles, posts de imagen ni historias.
+when_to_use: Frases como haz un video, haz una mini serie, revisa este guion, mejora el gancho, crea un personaje, haz la escena 2, cambia la voz, anima a Carlos, une las escenas, elige una voz, revisa que todo esté listo.
 argument-hint: "[qué quieres crear]"
 ---
 
@@ -24,9 +24,9 @@ jerga técnica, y nunca le pidas que toque código ni que ejecute comandos: los 
 
 | Paso | Costo aproximado |
 |---|---|
-| Imagen de un personaje (OpenRouter) | ~$0.07 por imagen |
+| Imagen de un personaje (OpenRouter) | ~0.07 USD por imagen |
 | Voz (ElevenLabs) | créditos del plan de ElevenLabs según cantidad de caracteres |
-| Animación (HeyGen) | ~$0.04 por segundo de video (una escena de 10 s ≈ $0.40) |
+| Animación (HeyGen) | ~0.04 USD por segundo de video (una escena de 10 s ≈ 0.40 USD) |
 | Unir escenas (FFmpeg) | gratis |
 
 ## Cómo se organiza
@@ -38,7 +38,10 @@ series/<serie>/
 ├── personajes/   carlos.png, ana.png …
 ├── voces/        escena1.mp3, escena2.mp3 …
 ├── videos/       escena1.mp4, escena2.mp4 …
-└── final/        <serie>.mp4
+├── final/        <serie>.mp4
+├── notas.md      marca, idioma y voz de cada personaje
+├── guion-original.md   el guion tal como ella lo pegó
+└── guion.md      el guion aprobado
 ```
 
 Los scripts crean las carpetas solos. El nombre de la serie y de los personajes se normaliza
@@ -48,10 +51,18 @@ Los scripts crean las carpetas solos. El nombre de la serie y de los personajes 
 
 ### 0. Planear con ella
 Pregúntale lo que falte y resume en una lista corta antes de gastar nada:
+- marca: lee `marcas/<marca>/marca.md`. Si hay más de una y no está claro cuál es, pregunta,
+- idioma: español o inglés. Si no lo dijo, pregunta,
 - nombre de la serie,
 - personajes (cómo se ven),
 - escenas: quién habla y qué dice en cada una (frases cortas: 5 a 20 segundos por escena),
-- voz de cada personaje.
+- voz de cada personaje. Si la serie ya tiene `notas.md`, usa lo que dice ahí.
+
+Guarda marca, idioma y voces en `series/<serie>/notas.md` para que sigan igual en otra sesión.
+Háblale siempre en español, aunque el video sea en inglés.
+
+**Revisa el guion antes de gastar**, siguiendo `guias/revisar-guion.md`. Por lo general ella lo trae
+hecho en ChatGPT: no lo reemplaces, propón mejoras y espera su OK.
 
 Da el costo total estimado y espera su OK.
 
@@ -78,8 +89,12 @@ Si no sabe qué voz usar, muéstrale las disponibles:
 ```
 node --env-file=.env scripts/listar-voces.ts
 ```
-Las etiquetas indican idioma y acento (`en`, `american`, `british`…). Para una serie en español,
-recomiéndale que agregue en la web de ElevenLabs una voz en español a "Mis voces" y luego usa su nombre.
+Las etiquetas indican idioma y acento (`en`, `american`, `british`…). Si no hay una voz para el idioma
+de la serie, recomiéndale que agregue una en la web de ElevenLabs a "Mis voces" y luego usa su nombre.
+
+Si ella ya tiene una voz, solo necesitas el nombre. Debe estar en "Mis voces" de la misma cuenta del
+`.env`. Anota la voz en `notas.md`, por personaje y por idioma: un personaje puede tener una voz en
+español y otra en inglés.
 
 ### 4. Generar la voz de cada escena
 ```
@@ -107,6 +122,9 @@ eso ella lo hace después en CapCut o Canva.
 Dile dónde está el video final, cuánto duró y el costo aproximado total. Pregunta si quiere cambiar
 alguna escena: para rehacer una sola escena, repite los pasos 4 y 5 de esa escena con `--reemplazar`
 (con su OK) y vuelve a unir.
+
+Ofrece el texto de la publicación con la skill `publicacion`. Recuérdale que, al publicar, debe
+activar la etiqueta de IA en Instagram.
 
 ## Problemas comunes
 
