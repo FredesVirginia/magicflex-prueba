@@ -126,13 +126,14 @@ try {
       [
         '--headless=new', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1',
         '--allow-file-access-from-files',
-        `--user-data-dir=${join(temporal, 'perfil')}`,
+        `--user-data-dir=${join(temporal, `perfil${indice}`)}`,
         `--window-size=${formato.ancho},${formato.alto}`,
         `--screenshot=${salida}`,
         pathToFileURL(pagina).href,
       ],
       { stdio: 'ignore' },
     );
+    for (let i = 0; i < 30 && !existsSync(salida); i++) await new Promise((r) => setTimeout(r, 500));
     if (!existsSync(salida)) salir(`No se pudo crear ${salida}`);
     console.log(`✅ ${join(carpetas.final, `${nombre}.png`)}`);
   }
