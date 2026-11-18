@@ -9,6 +9,8 @@ node_modules/
 # Videos, voces e imágenes generados (pesados y propios de cada persona)
 series/
 piezas/
+misiones/
+reportes-errores/
 
 # Ejemplos de cada marca (pesados y privados)
 marcas/*/ejemplos/

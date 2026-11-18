@@ -32,17 +32,27 @@ Colores y estilo deducidos de la landing y de 2 ejemplos. Falta confirmar con el
 Deducido de la landing y los ejemplos. Falta confirmar.
 
 - **Cómo habla:** directo, cercano, de tú. Flexi puede hablar en primera persona ("¡Hey! Soy Flexi").
-- **Palabras que usa:** Flexi, ofertas instantáneas, bloques, estaciones, drivers, prueba GRATIS
+- **Palabras que usa:** Flexi, ofertas instantáneas, bloques, estaciones, drivers, prueba GRATIS.
+  En español los drivers dicen "ofertas instantáneas" (no "Instant Offers"). Confirmado el 18-11-2026.
 - **Palabras que evita:** Pendiente
 
 ## Datos que se pueden decir
 Cifras, promesas y resultados confirmados por ella. Solo lo que esté aquí se usa sin preguntar.
 
-- Pendiente
+Confirmados por ella el 18-11-2026:
+- Hay **prueba gratis** y **no pide tarjeta**.
+- **Flexi busca las ofertas por el conductor.**
+- **FlexiWallet** es la billetera de la app: los clientes cargan crédito o saldo y lo usan para pagar
+  los servicios de MagicFlex.
+- **Multiestación:** Flexi ayuda al conductor a conseguir ofertas en más de una estación.
+- MagicFlex no usa aviso de "no afiliado a Amazon". Aun así, Amazon no va como protagonista: decir
+  "drivers de Flex" o "la app".
 
 **Aparecen en la landing, pero sin confirmar (no usar todavía):** incremento del 250% el primer mes,
 de 10 a 35 horas promedio por semana, hasta 99% más bloques, los porcentajes de rapidez y seguridad, y
 las promesas de cuenta "libre de riesgos" o "completamente segura".
 
 ## Lo que no se dice
-- Pendiente
+- **Seguridad vial:** ninguna escena, texto ni pregunta muestra o sugiere que el driver toca el teléfono
+  mientras maneja. La espera pasa estacionado o en la estación. (Aprobado el 18-11-2026.)
+- "Prueba gratis" sí; "no pagas nada" o "gratis" a secas no, porque suena a gratis para siempre.

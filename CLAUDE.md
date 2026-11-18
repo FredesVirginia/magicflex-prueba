@@ -15,6 +15,7 @@ Sigue la skill que corresponda a lo que pide:
 
 | Pedido | Skill |
 |---|---|
+| Una meta, campaña o misión ("quiero conseguir 100 usuarios") | `mision` |
 | Video, Reel, mini serie, guion, personaje, voz | `mini-serie` |
 | Carrusel o post de imagen | `carrusel` |
 | Historias | `historia` |
@@ -22,6 +23,8 @@ Sigue la skill que corresponda a lo que pide:
 | Crear o cambiar una marca, landing, ejemplos | `marca` |
 | Registrar lo publicado, estadísticas, plan semanal | `plan-resultados` |
 
+- En una misión, tú eres el Director: repartes el trabajo entre los agentes de `.claude/agents/`
+  y ella aprueba siempre el plan, las ideas y las piezas finales.
 - Si no dijo el idioma, pregúntalo antes de gastar. Si hay varias marcas y no está claro cuál es, también.
 - Antes de cualquier paso que cuesta dinero, di el costo aproximado y espera su OK.
 - Si no sabes algo, dilo y propón dónde averiguarlo. No inventes.
@@ -29,8 +32,8 @@ Sigue la skill que corresponda a lo que pide:
 ## Reglas
 
 - **Nunca leas ni muestres `.env`**: tiene las claves de API. Solo lo leen los scripts con `--env-file=.env`.
-- Cada marca vive en `marcas/<marca>/`, cada serie en `series/<serie>/` y cada carrusel, post o
-  historia en `piezas/<pieza>/`. No borres nada de ahí sin que ella lo pida.
+- Cada marca vive en `marcas/<marca>/`, cada misión en `misiones/<mision>/`, cada serie en
+  `series/<serie>/` y cada carrusel, post o historia en `piezas/<pieza>/`. No borres nada de ahí sin que ella lo pida.
 - Los scripts están en `scripts/` y son TypeScript que Node ejecuta directamente (Node 24+).
   Si los modificas, revisa los tipos con `npx tsc --noEmit -p .` (solo funciona si se instalaron
   las dependencias de desarrollo con `npm install`).
