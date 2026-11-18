@@ -1,4 +1,4 @@
-# Guía de instalación: Mini series con Claude
+# Guía de instalación: Contenido con Claude
 
 Esta guía se hace **una sola vez**. Después, para crear videos solo hablas con Claude.
 
@@ -90,13 +90,32 @@ API_KEY_HEYGEN=...
 
 ## 5. ¡A crear!
 
-Háblale a Claude con normalidad. Por ejemplo:
+Primero, dale a Claude lo que necesita de tu marca. Se hace una sola vez:
 
-- *"Quiero una mini serie llamada 'ofertas-flex' con Carlos, un repartidor de 25 años en su auto."*
+- *"Esta es la página de MagicFlex: ..."* Claude la lee y completa la ficha de la marca.
+- *"Mis ejemplos están en Descargas, en la carpeta Carruseles."* Con 3 a 5 piezas por formato alcanza.
+  Si están en Canva o Instagram, primero descárgalos a tu computadora.
+
+Después háblale con normalidad y dile siempre el idioma. Por ejemplo:
+
+- *"Revisa este guion que hice en ChatGPT. Es para un video en español."*
+- *"Quiero una mini serie en inglés llamada 'ofertas-flex' con Carlos, un repartidor de 25 años."*
 - *"Muéstrame las voces que tengo."*
-- *"Haz la escena 1: Carlos dice '¿Cansado de perder bloques?'"*
-- *"Rehaz la escena 2 con una voz más alegre."*
-- *"Une todas las escenas."*
+- *"Usa la voz de Valentina para Carlos."*
+- *"Haz un carrusel en español sobre cómo conseguir más bloques."*
+- *"Haz las historias de hoy, con una encuesta."*
+- *"Escribe el texto para publicar el video."*
+- *"Crea la marca Otra Marca, esta es su página: ..."*
+- *"Ya publiqué el carrusel de horas."*
+- *"Estas son las estadísticas del carrusel de horas."* Pega las capturas en el chat de Claude.
+- *"Estas son las estadísticas generales de octubre."* Pega la captura de toda la cuenta.
+- *"¿Cómo vamos comparado con el mes pasado?"*
+- *"¿Qué funcionó este mes?"*
+- *"Planea mi próxima semana."*
 
 Claude siempre te dirá cuánto va a costar antes de gastar, y esperará tu OK.
-Los videos quedan en `series/<nombre-de-la-serie>/final/`.
+Claude no publica en Instagram: eso lo haces tú. Al publicar videos con personajes realistas,
+activa la etiqueta de IA.
+
+Los videos quedan en `series/<nombre-de-la-serie>/final/`, y los carruseles, posts e historias en
+`piezas/<nombre-de-la-pieza>/final/`.

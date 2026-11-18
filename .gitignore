@@ -8,6 +8,13 @@ node_modules/
 
 # Videos, voces e imágenes generados (pesados y propios de cada persona)
 series/
+piezas/
+
+# Ejemplos de cada marca (pesados y privados)
+marcas/*/ejemplos/
+
+# Estadísticas y planes de cada marca (privados)
+marcas/*/resultados-estadisticas/
 
 # Paquetes para compartir
 entregas/
